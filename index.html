@@ -26,6 +26,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -64,10 +71,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/monkey32.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/monkey16.png?v=6.3.0">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
@@ -363,12 +370,24 @@
                 
               
 
-              <time title="Created: 2018-07-31 10:35:28 / Modified: 11:53:08" itemprop="dateCreated datePublished" datetime="2018-07-31T10:35:28+08:00">2018-07-31</time>
+              <time title="Created: 2018-07-31 10:35:28" itemprop="dateCreated datePublished" datetime="2018-07-31T10:35:28+08:00">2018-07-31</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-08-01 11:43:04" itemprop="dateModified" datetime="2018-08-01T11:43:04+08:00">2018-08-01</time>
               
             
           </span>
@@ -420,15 +439,14 @@
 
       
         
-          
-            <h1 id="How"><a href="#How" class="headerlink" title="How:"></a>How:</h1><h2 id="step1"><a href="#step1" class="headerlink" title="step1:"></a>step1:</h2><p>  先 duplicate 已存在的target，<br>  <a href="https://imgur.com/6N7IgyP" target="_blank" rel="noopener"><img src="https://i.imgur.com/6N7IgyP.png" title="source: imgur.com"></a><br>  之後會發現多出了對應的info.plist檔<br>  <a href="https://imgur.com/5VwbhdB" target="_blank" rel="noopener"><img src="https://i.imgur.com/5VwbhdB.png" title="source: imgur.com"></a></p>
-<h2 id="step2"><a href="#step2" class="headerlink" title="step2:"></a>step2:</h2><p>  target 和 info.plist檔 改名，<br>  <a href="https://imgur.com/qSOSIHv" target="_blank" rel="noopener"><img src="https://i.imgur.com/qSOSIHv.png" title="source: imgur.com"></a><br>  左上target選擇的地方，長按，選擇Manage schemes<br>  <a href="https://imgur.com/emXN53L" target="_blank" rel="noopener"><img src="https://i.imgur.com/emXN53L.png" title="source: imgur.com"></a><br>  這一步驟主要是要確認project 和改target顯示的名稱<br>  <a href="https://imgur.com/OLplIdv" target="_blank" rel="noopener"><img src="https://i.imgur.com/OLplIdv.png" title="source: imgur.com"></a></p>
-<h2 id="step3"><a href="#step3" class="headerlink" title="step3:"></a>step3:</h2><p>  接下來，點選target，之後點選choose info.plist file<br>  選擇對應的info.plist file檔案，<br>  <a href="https://imgur.com/r7ji7Rj" target="_blank" rel="noopener"><img src="https://i.imgur.com/r7ji7Rj.png" title="source: imgur.com"></a><br>  之後設定他所屬的BundleID和displayname，還有app icon<br><a href="https://imgur.com/9ogcJkC" target="_blank" rel="noopener"><img src="https://i.imgur.com/9ogcJkC.png" title="source: imgur.com"></a></p>
-<h2 id="step4"><a href="#step4" class="headerlink" title="step4:"></a>step4:</h2><p>  在 Swift 專案中，編譯器不再支援 preprocessor 的指令。<br>  所以如果查到下面資料要改 preprocessor，就是舊的了。<br>  新的改法是：<br>  點選target之後，選擇Build Settings，<br>  往下尋找Swift Compiler - Custom Flags<br>  之後 Other Swift Flags 點兩下之後，<br>  在最後面輸入-D XXX (這邊的xxx就是key來讓你後面繼續下面步驟))<br>  （-D )就是必須要的設置<br><a href="https://imgur.com/jCd2LLf" target="_blank" rel="noopener"><img src="https://i.imgur.com/jCd2LLf.png" title="source: imgur.com"></a></p>
-<h1 id="Use"><a href="#Use" class="headerlink" title="Use:"></a>Use:</h1><p>   之後再需要的地方，用下面的方式判斷是從哪個target就好</p>
-   <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">application</span><span class="params">(<span class="number">_</span> application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">        <span class="comment">// Override point for customization after application launch.</span></span><br><span class="line">        </span><br><span class="line">        #<span class="keyword">if</span> <span class="type">KKK</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"KKK!!!YAYAYAY"</span>)</span><br><span class="line">            versionControl = <span class="string">"KKK"</span></span><br><span class="line">        #elseif <span class="type">XXX</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"Sencod Brand!"</span>)</span><br><span class="line">            versionControl = <span class="string">"XXX"</span></span><br><span class="line">        #elseif <span class="type">ABC</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"ABC Brand!"</span>)</span><br><span class="line">            versionControl = <span class="string">"ABC"</span></span><br><span class="line">        #endif</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-          
+          <h1 id="How"><a href="#How" class="headerlink" title="How:"></a>How:</h1><h2 id="step1"><a href="#step1" class="headerlink" title="step1:"></a>step1:</h2><p>  先 duplicate 已存在的target，<br>  <a href="https://imgur.com/6N7IgyP" target="_blank" rel="noopener"><img src="https://i.imgur.com/6N7IgyP.png" title="source: imgur.com"></a><br>  之後會發現多出了對應的info.plist檔<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/iOS-MultipleTargets/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -438,7 +456,10 @@
     
     
     
-
+    <div>
+      
+    </div>
+    
     
 
     
@@ -582,7 +603,10 @@
     
     
     
-
+    <div>
+      
+    </div>
+    
     
 
     
@@ -687,7 +711,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-07-31 10:44:57" itemprop="dateModified" datetime="2018-07-31T10:44:57+08:00">2018-07-31</time>
+                <time title="Modified: 2018-08-01 11:42:51" itemprop="dateModified" datetime="2018-08-01T11:42:51+08:00">2018-08-01</time>
               
             
           </span>
@@ -757,7 +781,10 @@
     
     
     
-
+    <div>
+      
+    </div>
+    
     
 
     
@@ -905,7 +932,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
