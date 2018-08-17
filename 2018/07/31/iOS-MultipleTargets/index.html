@@ -125,25 +125,34 @@
 
 
 
-  <meta name="description" content="Let’s beginReact Native 所有的一切都是 Component，">
-<meta name="keywords" content="ReactNative">
+  <meta name="description" content="How:step1:  先 duplicate 已存在的target，    之後會發現多出了對應的info.plist檔">
+<meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React Native Tutorial">
-<meta property="og:url" content="https://deankai.github.io/react_native_tutorial1/index.html">
+<meta property="og:title" content="iOS mulitple targets">
+<meta property="og:url" content="https://deankai.github.io/2018/07/31/iOS-MultipleTargets/index.html">
 <meta property="og:site_name" content="Dean Kai Chang">
-<meta property="og:description" content="Let’s beginReact Native 所有的一切都是 Component，">
+<meta property="og:description" content="How:step1:  先 duplicate 已存在的target，    之後會發現多出了對應的info.plist檔">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-01T03:42:51.000Z">
+<meta property="og:image" content="https://i.imgur.com/6N7IgyP.png">
+<meta property="og:image" content="https://i.imgur.com/5VwbhdB.png">
+<meta property="og:image" content="https://i.imgur.com/qSOSIHv.png">
+<meta property="og:image" content="https://i.imgur.com/emXN53L.png">
+<meta property="og:image" content="https://i.imgur.com/OLplIdv.png">
+<meta property="og:image" content="https://i.imgur.com/r7ji7Rj.png">
+<meta property="og:image" content="https://i.imgur.com/9ogcJkC.png">
+<meta property="og:image" content="https://i.imgur.com/jCd2LLf.png">
+<meta property="og:updated_time" content="2018-08-01T03:43:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React Native Tutorial">
-<meta name="twitter:description" content="Let’s beginReact Native 所有的一切都是 Component，">
+<meta name="twitter:title" content="iOS mulitple targets">
+<meta name="twitter:description" content="How:step1:  先 duplicate 已存在的target，    之後會發現多出了對應的info.plist檔">
+<meta name="twitter:image" content="https://i.imgur.com/6N7IgyP.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://deankai.github.io/react_native_tutorial1/"/>
+  <link rel="canonical" href="https://deankai.github.io/2018/07/31/iOS-MultipleTargets/"/>
 
 
 
@@ -153,7 +162,7 @@
   };
 </script>
 
-  <title>React Native Tutorial | Dean Kai Chang</title>
+  <title>iOS mulitple targets | Dean Kai Chang</title>
   
 
 
@@ -329,12 +338,12 @@
 
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-iOS" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://deankai.github.io/react_native_tutorial1/">
+    <link itemprop="mainEntityOfPage" href="https://deankai.github.io/2018/07/31/iOS-MultipleTargets/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dean Kai Chang">
@@ -351,7 +360,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">React Native Tutorial
+          <h1 class="post-title" itemprop="name headline">iOS mulitple targets
               
             
           </h1>
@@ -376,7 +385,7 @@
                 
               
 
-              <time title="Created: 2018-07-26 00:00:00" itemprop="dateCreated datePublished" datetime="2018-07-26T00:00:00+08:00">2018-07-26</time>
+              <time title="Created: 2018-07-31 10:35:28" itemprop="dateCreated datePublished" datetime="2018-07-31T10:35:28+08:00">2018-07-31</time>
             
 
             
@@ -393,7 +402,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-01 11:42:51" itemprop="dateModified" datetime="2018-08-01T11:42:51+08:00">2018-08-01</time>
+                <time title="Modified: 2018-08-01 11:43:04" itemprop="dateModified" datetime="2018-08-01T11:43:04+08:00">2018-08-01</time>
               
             
           </span>
@@ -410,7 +419,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/React-Native/" itemprop="url" rel="index"><span itemprop="name">React Native</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a></span>
 
                 
                 
@@ -444,10 +453,12 @@
       
 
       
-        <h1 id="Let’s-begin"><a href="#Let’s-begin" class="headerlink" title="Let’s begin"></a>Let’s begin</h1><p><a href="https://facebook.github.io/react-native/docs/getting-started" target="_blank" rel="noopener">React Native</a></p>
-<p>所有的一切都是 Component，<br><a id="more"></a><br>第一行就先當做是固定import的，<br>第二行就是需要引入的view物件（官方做好的components）。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Text, View &#125; <span class="keyword">from</span> <span class="string">'react-native'</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<h2 id="傳值："><a href="#傳值：" class="headerlink" title="傳值："></a>傳值：</h2><p>需要可以被別的class使用，需要關鍵字export<br>props：屬性  =&gt; 不需宣告或是init，可直接傳入後使用，傳入後無法變更</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Layout</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="comment">// constructor() &#123;</span></span><br><span class="line">    <span class="comment">//     super();</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span>(</span><br><span class="line">            &lt;Text&gt;It<span class="string">'s &#123;this.props.name&#125;&lt;/Text&gt;</span></span><br><span class="line"><span class="string">        );</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
+        <h1 id="How"><a href="#How" class="headerlink" title="How:"></a>How:</h1><h2 id="step1"><a href="#step1" class="headerlink" title="step1:"></a>step1:</h2><p>  先 duplicate 已存在的target，<br>  <a href="https://imgur.com/6N7IgyP" target="_blank" rel="noopener"><img src="https://i.imgur.com/6N7IgyP.png" title="source: imgur.com"></a><br>  之後會發現多出了對應的info.plist檔<br>  <a id="more"></a><br>  <a href="https://imgur.com/5VwbhdB" target="_blank" rel="noopener"><img src="https://i.imgur.com/5VwbhdB.png" title="source: imgur.com"></a></p>
+<h2 id="step2"><a href="#step2" class="headerlink" title="step2:"></a>step2:</h2><p>  target 和 info.plist檔 改名，<br>  <a href="https://imgur.com/qSOSIHv" target="_blank" rel="noopener"><img src="https://i.imgur.com/qSOSIHv.png" title="source: imgur.com"></a><br>  左上target選擇的地方，長按，選擇Manage schemes<br>  <a href="https://imgur.com/emXN53L" target="_blank" rel="noopener"><img src="https://i.imgur.com/emXN53L.png" title="source: imgur.com"></a><br>  這一步驟主要是要確認project 和改target顯示的名稱<br>  <a href="https://imgur.com/OLplIdv" target="_blank" rel="noopener"><img src="https://i.imgur.com/OLplIdv.png" title="source: imgur.com"></a></p>
+<h2 id="step3"><a href="#step3" class="headerlink" title="step3:"></a>step3:</h2><p>  接下來，點選target，之後點選choose info.plist file<br>  選擇對應的info.plist file檔案，<br>  <a href="https://imgur.com/r7ji7Rj" target="_blank" rel="noopener"><img src="https://i.imgur.com/r7ji7Rj.png" title="source: imgur.com"></a><br>  之後設定他所屬的BundleID和displayname，還有app icon<br><a href="https://imgur.com/9ogcJkC" target="_blank" rel="noopener"><img src="https://i.imgur.com/9ogcJkC.png" title="source: imgur.com"></a></p>
+<h2 id="step4"><a href="#step4" class="headerlink" title="step4:"></a>step4:</h2><p>  在 Swift 專案中，編譯器不再支援 preprocessor 的指令。<br>  所以如果查到下面資料要改 preprocessor，就是舊的了。<br>  新的改法是：<br>  點選target之後，選擇Build Settings，<br>  往下尋找Swift Compiler - Custom Flags<br>  之後 Other Swift Flags 點兩下之後，<br>  在最後面輸入-D XXX (這邊的xxx就是key來讓你後面繼續下面步驟))<br>  （-D )就是必須要的設置<br><a href="https://imgur.com/jCd2LLf" target="_blank" rel="noopener"><img src="https://i.imgur.com/jCd2LLf.png" title="source: imgur.com"></a></p>
+<h1 id="Use"><a href="#Use" class="headerlink" title="Use:"></a>Use:</h1><p>   之後再需要的地方，用下面的方式判斷是從哪個target就好</p>
+   <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">application</span><span class="params">(<span class="number">_</span> application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">        <span class="comment">// Override point for customization after application launch.</span></span><br><span class="line">        </span><br><span class="line">        #<span class="keyword">if</span> <span class="type">KKK</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"KKK!!!YAYAYAY"</span>)</span><br><span class="line">            versionControl = <span class="string">"KKK"</span></span><br><span class="line">        #elseif <span class="type">XXX</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"Sencod Brand!"</span>)</span><br><span class="line">            versionControl = <span class="string">"XXX"</span></span><br><span class="line">        #elseif <span class="type">ABC</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"ABC Brand!"</span>)</span><br><span class="line">            versionControl = <span class="string">"ABC"</span></span><br><span class="line">        #endif</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -466,12 +477,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>Title:</span><a href="/react_native_tutorial1/">React Native Tutorial</a></p>
+  <p><span>Title:</span><a href="/2018/07/31/iOS-MultipleTargets/">iOS mulitple targets</a></p>
   <p><span>Author:</span><a href="/" title="Visit Dean Kai Chang 's Blog">Dean Kai Chang</a></p>
-  <p><span>Post Time:</span>2018/07/26 - 00:07</p>
+  <p><span>Post Time:</span>2018/07/31 - 10:07</p>
   <p><span>Last update:</span>2018/08/01 - 11:08</p>
-  <p><span>Original Link:</span><a href="/react_native_tutorial1/" title="React Native Tutorial">https://deankai.github.io/react_native_tutorial1/</a>
-    <span class="copy-path"  title="Click To Copy this link"><i class="fa fa-clipboard" data-clipboard-text="https://deankai.github.io/react_native_tutorial1/"  aria-label="Done！"></i></span>
+  <p><span>Original Link:</span><a href="/2018/07/31/iOS-MultipleTargets/" title="iOS mulitple targets">https://deankai.github.io/2018/07/31/iOS-MultipleTargets/</a>
+    <span class="copy-path"  title="Click To Copy this link"><i class="fa fa-clipboard" data-clipboard-text="https://deankai.github.io/2018/07/31/iOS-MultipleTargets/"  aria-label="Done！"></i></span>
   </p>
   <p><span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商業性使用-禁止演譯 4.0 國際</a> 轉載請保留原文連結和作者。</p>  
 </div>
@@ -503,7 +514,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ReactNative/" rel="tag"># ReactNative</a>
+            <a href="/tags/iOS/" rel="tag"># iOS</a>
           
         </div>
       
@@ -516,14 +527,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/07/26/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/16/othersBookMarks/" rel="prev" title="othersBookMarks">
+                othersBookMarks <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -668,7 +683,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Let’s-begin"><span class="nav-number">1.</span> <span class="nav-text">Let’s begin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#傳值："><span class="nav-number">1.1.</span> <span class="nav-text">傳值：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How"><span class="nav-number">1.</span> <span class="nav-text">How:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#step1"><span class="nav-number">1.1.</span> <span class="nav-text">step1:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step2"><span class="nav-number">1.2.</span> <span class="nav-text">step2:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step3"><span class="nav-number">1.3.</span> <span class="nav-text">step3:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step4"><span class="nav-number">1.4.</span> <span class="nav-text">step4:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Use"><span class="nav-number">2.</span> <span class="nav-text">Use:</span></a></li></ol></div>
             
 
           </div>
