@@ -1903,7 +1903,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #446525;
+  background: #ff05ac;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3118,4 +3118,12 @@ a {
 }
 .post-button a:hover {
   color: #7784ba;
+}
+body {
+  background: url("https://source.unsplash.com/random/1600x900");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
 }
